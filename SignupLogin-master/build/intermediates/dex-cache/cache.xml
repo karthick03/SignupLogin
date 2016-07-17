@@ -1,2 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_cf8d393ae583f27d8c42932e8b71c9e0b4df976f.jar" />
+    </item>
+    <item
+        jar="/Users/karthickramjee/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/pre-dexed/debug/okio-1.9.0_9d737be766e2de7a849f18450305af2691550070.jar" />
+    </item>
+    <item
+        jar="/Users/karthickramjee/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/24.0.0/2943c74db6d4346ab8c6531adac91fa05c137c40/support-annotations-24.0.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0_9d907896502ae380c200596d642ee6091c17d108.jar" />
+    </item>
+    <item
+        jar="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.4.0_eddc3e65cd4f30e5dfb257bbbf243690d8e72fd2.jar" />
+    </item>
+    <item
+        jar="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_79580f43b0965ee56713e0778d0bef9d4c6ca7c0.jar" />
+    </item>
+    <item
+        jar="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_3dc96632221dd0f8a3b1a5a85e4e69b4147d9ccf.jar" />
+    </item>
+    <item
+        jar="/Users/karthickramjee/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_e8fee6b782065ab7173aa5703ae25b1fc2127a80.jar" />
+    </item>
+    <item
+        jar="/Users/karthickramjee/scotch-todo/platforms/Login/app/libs/bsh-2.0b4.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="a05f0a0feefa8d8467ac80e16e7de071489f0d9c">
+        <dex dex="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/pre-dexed/debug/bsh-2.0b4_5e53eb15160429a112f70a01d7f7d5916d3a7d99.jar" />
+    </item>
+    <item
+        jar="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/exploded-aar/android.lib.recaptcha/reCAPTCHA/2.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="00fdd7831c11bf7a0302225e963e870d73b20b04">
+        <dex dex="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/pre-dexed/debug/android.lib.recaptcha-reCAPTCHA-2.0.0_8ee45234b99bc0d9fcdad85d7a6c31f31db3a4ef.jar" />
+    </item>
+    <item
+        jar="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_c8962c17c165096179f352cccccfc883ad08da51.jar" />
+    </item>
+    <item
+        jar="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_97256e0e2f2f7742aa1b51e4c662a2ac7982caf2.jar" />
+    </item>
+    <item
+        jar="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/karthickramjee/scotch-todo/platforms/Login/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_70da99323dd9e81048bcf32b773d4825808d6b0b.jar" />
+    </item>
+
+</items>
