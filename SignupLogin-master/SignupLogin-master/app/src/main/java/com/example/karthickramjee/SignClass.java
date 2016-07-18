@@ -1,6 +1,7 @@
 package com.example.karthickramjee.login;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
 public class SignClass extends AppCompatActivity {
 
 
@@ -18,6 +20,11 @@ public class SignClass extends AppCompatActivity {
     Button register;
     private int up=0,low=0,no=0,spl=0,xtra=0,len=0,points=0,max=8;
     private char c;
+    private boolean signcheck;
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final String Name = "nameKey";
+    public static final String Password = "phoneKey";
+    public static final String Email = "emailKey";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +48,20 @@ public class SignClass extends AppCompatActivity {
                 if(passval.matches(""))
                     password.setError("Password Required");
                 calcStr(passval);
+                if(signcheck==true && !(name.getText().toString().matches("")) && !(email.getText().toString().matches("")))
+                {
+                    SharedPreferences sharedPreferences=getSharedPreferences(MyPREFERENCES,0);
+                    SharedPreferences.Editor edit=sharedPreferences.edit();
+                    edit.putString(Name,name.getText().toString());
+                    edit.putString(Email,email.getText().toString());
+                    edit.putString(Password,password.getText().toString());
+                    edit.commit();
+                    finish();
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Please enter your credentials properly",Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -86,11 +107,11 @@ public class SignClass extends AppCompatActivity {
                 }
             }
         }
-        if(points<=3) showMessage("Password Strength : LOW ");
+        if(points<=3) {showMessage("Password Strength : LOW ");signcheck=false;}
         else
-        if(points<=6) showMessage("Password Strength : MEDIUM ");
+        if(points<=6) {showMessage("Password Strength : MEDIUM ");signcheck=true;}
         else
-        if(points<=9) showMessage("Password Strength : HIGH ");
+        if(points<=9) {showMessage("Password Strength : HIGH ");signcheck=true;}
         points=0;len=0;up=0;low=0;no=0;xtra=0;spl=0;
     }
 
