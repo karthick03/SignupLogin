@@ -1,6 +1,7 @@
 package com.example.karthickramjee.login;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,8 +15,8 @@ import android.lib.recaptcha.ReCaptcha;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
+
 
 public class LoginActivity extends AppCompatActivity implements ReCaptcha.OnShowChallengeListener, ReCaptcha.OnVerifyAnswerListener{
 
@@ -27,6 +28,10 @@ public class LoginActivity extends AppCompatActivity implements ReCaptcha.OnShow
     private ProgressBar progress;
     private Button signup,login;
     private boolean checkvalue=false;
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final String Name = "nameKey";
+    public static final String Password = "phoneKey";
+    public static final String Email = "emailKey";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,8 +60,17 @@ public class LoginActivity extends AppCompatActivity implements ReCaptcha.OnShow
             @Override
             public void onClick(View v) {
                 verifyAnswer();
-                if(username.getText().toString().equals("karthi") && password.getText().toString().equals("karthi") && checkvalue)
+                SharedPreferences sharedPreferences=getSharedPreferences(MyPREFERENCES,0);
+                String sharedName=sharedPreferences.getString(Name,"");
+                String sharedPassword=sharedPreferences.getString(Password,"");
+                if((sharedName.equals(username.getText().toString())) &&  (sharedPassword.equals(password.getText().toString()))) {
                     Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_SHORT).show();
+                    username.setText("");
+                    password.setText("");
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Login Failure", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         /*this.findViewById(R.id.verify).setOnClickListener(new View.OnClickListener() {
@@ -95,16 +109,14 @@ public class LoginActivity extends AppCompatActivity implements ReCaptcha.OnShow
     public void onAnswerVerified(final boolean success) {
         if (success) {
             checkvalue=true;
-            answer.setText("");
-            showChallenge();
             Toast.makeText(this, R.string.verification_success, Toast.LENGTH_SHORT).show();
         } else {
             checkvalue=false;
-            answer.setText("");
-            showChallenge();
             Toast.makeText(this, R.string.verification_failed, Toast.LENGTH_SHORT).show();
         }
 
+        answer.setText("");
+        showChallenge();
         // (Optional) Shows the next CAPTCHA
         //this.showChallenge();
         this.progress.setVisibility(View.GONE);
@@ -112,9 +124,9 @@ public class LoginActivity extends AppCompatActivity implements ReCaptcha.OnShow
 
     private void showChallenge() {
         // Displays a progress bar while downloading CAPTCHA
+        checkvalue=false;
         this.progress.setVisibility(View.VISIBLE);
         this.reCaptcha.setVisibility(View.GONE);
-
         this.reCaptcha.setLanguageCode("en");
         this.reCaptcha.showChallengeAsync(LoginActivity.PUBLIC_KEY, this);
     }
