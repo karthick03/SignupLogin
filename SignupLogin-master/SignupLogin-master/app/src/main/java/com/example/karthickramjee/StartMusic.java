@@ -51,4 +51,11 @@ public class StartMusic extends AppCompatActivity {
         status.setVisibility(View.VISIBLE);
         this.registerReceiver(this.mBatInfoReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
     }
+    public void customIntent(View view)
+    {
+        status.setVisibility(View.GONE);
+        Intent intent=new Intent();
+        intent.setAction("com.example.CUSTOM_INTENT");
+        sendBroadcast(intent);
+    }
 }
