@@ -53,22 +53,22 @@
         <activity android:name=".StartMusic"
             android:label="Service"
             android:theme="@style/AppTheme">
-            <!--<intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
         </activity>
         <service android:name="PlayMusic" android:enabled="true"/>
         <service android:name="StartToast" android:enabled="true"/>
         <activity android:name=".ListApps"
             android:label="ApplicationInfo"
             android:theme="@style/AppTheme">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
     </application>
 
